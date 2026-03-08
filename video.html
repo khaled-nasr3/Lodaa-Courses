@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Video Player</title>
+    <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="d-flex flex-column justify-content-center align-items-center ">
+        <div class="ms-5">
+            <a href="index.html"><img class="ms-4 " src="images/icons8-home-48.png" alt=""></a>
+            <p class="ms-4">Home</p>
+            <div id="videoContainer"></div>
+            <div id="rate"></div>
+        </div>
+        <div>
+            <footer class=" text-white bg-primary ms-5">
+                <div class="d-flex gap-0">
+                    <h1 class="ms-5"> Created by <h1 class="fw-bold"> Khaled Nasr</h1> <h1>©2026</h1></h1>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const videoId = params.get("v");
+
+        if (videoId) {
+            document.getElementById("videoContainer").innerHTML = `
+        <iframe width="800" height="450" src="https://www.youtube.com/embed/${videoId}" 
+        title="YouTube video" frameborder="0" allowfullscreen></iframe>
+      `;
+        } else {
+            document.getElementById("videoContainer").innerHTML = "<p>No video selected</p>";
+        }
+    </script>
+</body>
+
+</html>

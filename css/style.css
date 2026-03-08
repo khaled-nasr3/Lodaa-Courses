@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap');
+
+* {
+  font-family: "Rubik", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f8f9fa;
+}
+.heroText{
+    margin-top: 200px !important;
+}
+.card {
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+
+.card-body h6 {
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+
+.video-duration {
+  display: inline-block;
+  background-color: #ffc107;
+  color: #000;
+  font-weight: 500;
+  font-size: 0.9rem;
+  padding: 2px 6px;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+footer{
+    width: 1210px !important;
+    margin-top: 170px;
+}
