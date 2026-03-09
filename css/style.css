@@ -7,10 +7,19 @@
 
 body {
   background-color: #f8f9fa;
+  overflow-x: hidden;
 }
-.heroText{
-    margin-top: 200px !important;
+
+@media(max-width:700px) {
+  .navbar {
+    width: auto;
+  }
 }
+
+.heroText {
+  margin-top: 200px !important;
+}
+
 .card {
   transition: transform 0.2s;
 }
@@ -37,9 +46,17 @@ body {
   font-size: 0.9rem;
   padding: 2px 6px;
   border-radius: 5px;
-  margin-top: 5px;
+  margin-top: 100px;
 }
-footer{
-    width: 1210px !important;
-    margin-top: 170px;
+
+footer {
+  width: 1210px !important;
+  margin-top: 170px;
+}
+
+@media(max-width:1024px){
+  footer{
+    width: 600px !important;
+    margin: auto;
+  }
 }
