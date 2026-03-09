@@ -9,7 +9,7 @@ searchBtn.addEventListener("click", () => {
 
   videosContainer.innerHTML = "<p>Loading...</p>";
 
-  // البحث عن الفيديوهات
+  
   fetch(`https://www.googleapis.com/youtube/v3/search?key=${API_KEY}&q=${query}&type=video&part=snippet&maxResults=6`)
     .then(res => res.json())
     .then(data => {
@@ -20,7 +20,7 @@ searchBtn.addEventListener("click", () => {
         const title = item.snippet.title;
         const thumbnail = item.snippet.thumbnails.medium.url;
 
-        // جلب مدة الفيديو
+       
         fetch(`https://www.googleapis.com/youtube/v3/videos?key=${API_KEY}&id=${videoId}&part=contentDetails`)
           .then(res => res.json())
           .then(detailsData => {
